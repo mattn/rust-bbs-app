@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>1行掲示板</title>
+</head>
+<body>
+  <div class="container">
+    <form action="/add" method="post">
+      <input type="text" name="body" value=""/>
+      <input type="submit" value="add"/>
+    </form>
+    <div class="entries">
+      <ul>
+      {% for entry in entries %}
+        <li>
+          <p>{{ entry.body }}</p>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

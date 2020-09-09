@@ -1,0 +1,23 @@
+[development]
+address = "127.0.0.1"
+port = 8000
+workers = 32
+keep_alive = 5
+log = "normal"
+#secret_key = "123"
+limits = { forms = 65536 }
+
+[production]
+address = "127.0.0.1"
+port = 8000
+workers = 16
+keep_alive = 1
+log = "off"
+#secret_key = "123"
+limits = { forms = 65536 }
+
+[global]
+template_dir = "static"
+
+[global.databases.sqlite_database]
+url = "bbs.sqlite"
